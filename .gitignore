@@ -1,0 +1,39 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+build/
+captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Compiled outputs
+*.apk
+*.aab
+*.aar
+*.class
+*.jar
+
+# Model files — never commit these
+*.gguf
+*.ggml
+models/
+app/src/main/assets/models/
+
+# Keys and signing
+*.jks
+*.keystore
+keystore.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.kotlin/

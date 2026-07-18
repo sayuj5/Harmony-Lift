@@ -1,0 +1,51 @@
+name: ⚡ Performance Issue
+description: Report a performance problem (lag, high RAM, slow inference, etc.)
+title: "[Performance]: "
+labels: ["performance", "needs-triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Performance Issue Description
+      description: Describe the performance problem you are experiencing.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Performance Area
+      options:
+        - App Startup / Cold Start
+        - AI Inference Latency (First Token)
+        - AI Inference Throughput (Tokens/sec)
+        - Pitch Detection Latency
+        - Memory Usage (RAM)
+        - Battery Drain
+        - Model Download Speed
+        - UI Frame Drops
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device & RAM
+      placeholder: e.g., Pixel 6, 8GB RAM
+    validations:
+      required: true
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android Version
+      placeholder: e.g., Android 14
+    validations:
+      required: true
+
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Measured Values
+      description: Provide any concrete measurements (e.g., first token at 8 seconds, 1.2GB RAM usage)
