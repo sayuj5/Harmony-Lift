@@ -4,7 +4,7 @@ import android.util.Log
 
 object HarmonyLiftDebug {
     private const val TAG = "HarmonyLiftDebug"
-    private var isEnabled = true // Set to false in release builds if desired
+    @PublishedApi internal var isEnabled = true // Set to false in release builds if desired
 
     fun d(message: String) {
         if (isEnabled) Log.d(TAG, message)

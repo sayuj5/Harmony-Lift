@@ -90,7 +90,7 @@ class MainActivity : ComponentActivity() {
                 HarmonyLiftDebug.d("[Theme] Recomposition: current themeMode=$themeMode")
             }
             HarmonyLiftTheme(themeMode = themeMode) {
-                HarmonyLiftApp(viewModel, practiceSessionViewModel, audioPipeline)
+                HarmonyLiftApp(viewModel, practiceSessionViewModel, audioPipeline, practiceRepository)
             }
         }
         HarmonyLiftDebug.d("[MainActivity] onCreate() complete.")
@@ -101,7 +101,8 @@ class MainActivity : ComponentActivity() {
 fun HarmonyLiftApp(
     viewModel: TheoryTutorViewModel,
     practiceSessionViewModel: com.harmonylift.app.presentation.PracticeSessionViewModel,
-    audioPipeline: AudioToTheoryPipeline
+    audioPipeline: AudioToTheoryPipeline,
+    practiceRepository: com.harmonylift.app.data.PracticeRepository
 ) {
     val navController = rememberNavController()
     val context = androidx.compose.ui.platform.LocalContext.current

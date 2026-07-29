@@ -1,3 +1,5 @@
+println("HarmonyLiftDebug: configuring module :ui")
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -20,6 +22,9 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = "21"
     }
 
 }
