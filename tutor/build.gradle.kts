@@ -32,7 +32,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation(project(":theory"))
     implementation(project(":audio"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
     
     // Compose
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
