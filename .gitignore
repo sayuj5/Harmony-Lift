@@ -20,6 +20,7 @@ local.properties
 *.aar
 *.class
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Model files — never commit these
 *.gguf
