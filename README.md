@@ -108,13 +108,14 @@ Harmony-Lift runs **Llama 3.2 1B** directly on your Android device using a custo
 
 <div align="center">
 
-| Dashboard | Practice Session | AI Tutor | Settings |
-|:---------:|:----------------:|:--------:|:--------:|
-| <img src="docs/images/dashboard.png" width="200"/> | <img src="docs/images/practice.png" width="200"/> | <img src="docs/images/home.png" width="200"/> | <img src="docs/images/settings.png" width="200"/> |
+| App Screen | App Screen | App Screen |
+|:----------:|:----------:|:----------:|
+| <img src="Images/Screenshot_2026_07_09-1.png" width="200"/> <br> *Home Dashboard* | <img src="Images/Screenshot_2026_07_09-2.png" width="200"/> <br> *Live Listening* | <img src="Images/Screenshot_2026_07_09-4.png" width="200"/> <br> *Chord Detection* |
+| <img src="Images/Screenshot_2026_07_09-5.png" width="200"/> <br> *AI Tutor Chat* | <img src="Images/Screenshot_2026_07_09-8.png" width="200"/> <br> *Practice Session* | <img src="Images/Screenshot_2026_07_10-4.png" width="200"/> <br> *Settings Menu* |
+| <img src="Images/Screenshot_2026_07_14-5.png" width="200"/> <br> *Scale Recognition* | <img src="Images/Screenshot_2026_07_14-6.png" width="200"/> <br> *PDF Export* | <img src="Images/Screenshot_2026_07_14-8.png" width="200"/> <br> *Progress Tracking* |
+| <img src="Images/Screenshot_2026_07_18-1.png" width="200"/> <br> *Theme Settings* | <img src="Images/Screenshot_2026_07_18-2.png" width="200"/> <br> *About Harmony-Lift* | |
 
 </div>
-
-> **Note:** Add actual screenshots to `docs/images/` to replace these placeholders.
 
 ---
 
