@@ -12,7 +12,7 @@ object ModelDownloadManager {
     private val _state = MutableStateFlow<ModelDownloadState>(ModelDownloadState.Idle)
     val state: StateFlow<ModelDownloadState> = _state.asStateFlow()
 
-    private const val DEFAULT_MODEL_URL = "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q3_K_M.gguf"
+    private const val DEFAULT_MODEL_URL = "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf"
 
     fun postState(newState: ModelDownloadState) {
         _state.value = newState
@@ -21,7 +21,7 @@ object ModelDownloadManager {
     fun checkExistingModel(context: Context) {
         val destDir = File(context.filesDir, "models")
         if (!destDir.exists()) destDir.mkdirs()
-        val modelFileName = "Llama-3.2-1B-Instruct-Q3_K_M.gguf"
+        val modelFileName = "Llama-3.2-1B-Instruct-Q4_K_M.gguf"
         val destFile = File(destDir, modelFileName)
         
         if (destFile.exists() && destFile.length() > 0 && destFile.canRead()) {

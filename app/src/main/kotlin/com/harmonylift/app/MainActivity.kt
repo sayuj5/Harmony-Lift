@@ -44,6 +44,12 @@ class MainActivity : ComponentActivity() {
         val micGranted = micPermission == PackageManager.PERMISSION_GRANTED
         HarmonyLiftDebug.d("[MainActivity] RECORD_AUDIO permission: ${if (micGranted) "GRANTED" else "DENIED"}")
 
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 101)
+            }
+        }
+
         // --- Dependencies ---
         val theoryEngine = TheoryEngine()
         val detectChordUseCase = DetectChordUseCase(theoryEngine)

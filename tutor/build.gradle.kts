@@ -10,8 +10,29 @@ android {
     namespace = "com.harmonylift.tutor"
     compileSdk = 34
 
+    ndkVersion = "30.0.16138531"
+
     defaultConfig {
         minSdk = 26
+
+        externalNativeBuild {
+            cmake {
+                cppFlags += "-std=c++17"
+                arguments += listOf(
+                    "-DANDROID_STL=c++_shared",
+                    "-DANDROID_PLATFORM=android-26"
+                )
+                // Only build for 64-bit ARM — the only relevant Android target today
+                abiFilters += listOf("arm64-v8a", "x86_64")
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "4.1.2"
+        }
     }
 
     buildFeatures {
